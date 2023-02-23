@@ -12,6 +12,17 @@ jobs:
 
       - run: cd Labo2-Backend && npm run domain.test.js
 
+  integrationFrontend:
+    docker:
+      - image: cimg/node:17.2.0
+
+    steps:
+      - run: git clone https://github.com/logpome/Labo2-Backend.git
+
+      - run: git clone https://github.com/logpome/Labo2-Frontend.git
+
+      - run: cd Labo2-Frontend && npm install
+
 workflows:
   Labo2-workflow:
     jobs:
