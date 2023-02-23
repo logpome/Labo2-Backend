@@ -2,6 +2,9 @@ version: 2.1
 
 jobs:
   checkoutEtTests:
+    docker:
+      - image: cimg/node:17.2.0
+
     steps:
       - run: git clone https://github.com/logpome/Labo2-Backend.git
 
