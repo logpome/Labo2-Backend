@@ -1,18 +1,11 @@
 version: 2.1
 
 jobs:
-  say-hello:
-    docker:
-      - image: cimg/base:stable
-
+  checkoutEtTests:
     steps:
-      - checkout
-
-      - run:
-          name: "Say hello"
-          command: "echo Hello, World!"
+      - run: git clone https://github.com/logpome/Labo2-Backend.git
 
 workflows:
-  say-hello-workflow:
+  Labo2-workflow:
     jobs:
-      - say-hello
+      - checkoutEtTests
