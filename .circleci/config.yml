@@ -8,6 +8,10 @@ jobs:
     steps:
       - run: git clone https://github.com/logpome/Labo2-Backend.git
 
+      - run: cd Labo2-Backend && npm install
+
+      - run: cd Labo2-Backend && npm run domain.test.js
+
 workflows:
   Labo2-workflow:
     jobs:
