@@ -22,6 +22,12 @@ jobs:
       - run: git clone https://github.com/logpome/Labo2-Frontend.git
 
       - run: cd Labo2-Frontend && npm install
+      
+      - run: cd Labo2-Frontend && npm run build
+
+      - run: cp -rT Labo2-Frontend/build/* Labo2-Backend/public
+
+      
 
 workflows:
   Labo2-workflow:
