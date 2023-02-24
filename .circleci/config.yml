@@ -47,3 +47,11 @@ workflows:
   Labo2-workflow:
     jobs:
       - checkoutEtTests
+      
+      - integrationFrontend:
+          requires:
+            - checkoutEtTests
+
+      - deploiement:
+          requires:
+            - integrationFrontend
