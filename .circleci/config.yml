@@ -10,7 +10,7 @@ jobs:
 
       - run: cd Labo2-Backend && npm install
 
-      - run: cd Labo2-Backend && npm run domain.test.js
+      - run: cd Labo2-Backend && npm run test
 
   integrationFrontend:
     docker:
