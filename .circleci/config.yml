@@ -27,7 +27,21 @@ jobs:
 
       - run: cp -rT Labo2-Frontend/build/* Labo2-Backend/public
 
-      
+      - persist_to_workspace:
+          root: .
+
+          paths:
+            - Labo2-Backend
+
+  deploiement:
+    docker:
+      - image: cimg/node:17.2.0
+
+    steps:
+      - attach_workspace:
+          at: .
+
+      - run: cd Labo2-Backend && ls -Rl
 
 workflows:
   Labo2-workflow:
