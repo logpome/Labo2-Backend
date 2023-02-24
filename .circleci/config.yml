@@ -25,7 +25,7 @@ jobs:
       
       - run: cd Labo2-Frontend && npm run build
 
-      - run: cp -rT Labo2-Frontend/build/* Labo2-Backend/public
+      - run: cp -rT Labo2-Frontend/build/ Labo2-Backend/public
 
       - persist_to_workspace:
           root: .
